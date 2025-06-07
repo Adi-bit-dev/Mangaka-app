@@ -1,6 +1,6 @@
 .weekly-spotlight {
     /* min-width: 400px; */
-    /* flex: 1.3; */
+    flex: 1.3;
     align-self: baseline;
     display: flex;
     flex-direction: column;
@@ -28,14 +28,14 @@
     max-width: 605px;
 
     display: flex;
-    gap: 15px;
+    gap: 11px;
     flex-wrap: wrap;
     margin-top: 20px;
 }
 
 .weekly-spotlight-cards {
     height: 200px;
-    /* width: 140px; */
+    width: 140px;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: transform 0.2s ease;
