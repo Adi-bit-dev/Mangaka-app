@@ -65,6 +65,7 @@ function SearchPage() {
 
     useEffect(() => {
         if (mangaName.trim() !== "") {
+            console.log(mangaName);
             searchManga(mangaName);
         } else {
             setLoading(false);
