@@ -51,42 +51,20 @@ function Navbar({ setShowMenu }) {
             }
         }
 
-        // function handleKeyDown(event) {
-        //     if (event.key !== "Enter") return;
-
-        //     const searchInput = document.getElementById("auth-search-field");
-        //     const search = searchInput.value.trim();
-
-        //     console.log("User searched:", search);
-
-        //     // route the user to the search page and pss the manga name
-        //     navigate('/searchPage', {state: {mangaName: search}});
-
-        //     if (searchVisible) {
-        //         hideSearch();
-        //     }
-        // }
-
         function handleKeyDown(event) {
             if (event.key !== "Enter") return;
 
             const searchInput = document.getElementById("auth-search-field");
             const search = searchInput.value.trim();
 
-            if (!search) return;
-
-            event.preventDefault(); //  prevent any default form behavior
-            searchInput.blur(); //  unfocus the input so mobile keyboard hides
-
             console.log("User searched:", search);
 
-            navigate('/searchPage', { state: { mangaName: search } });
+            // route the user to the search page and pss the manga name
+            navigate('/searchPage', {state: {mangaName: search}});
 
             if (searchVisible) {
                 hideSearch();
             }
-
-            window.scrollTo(0, 0); // ⬆ ensure you're at top of the new page
         }
 
         document.addEventListener("mousedown", handleClickOutside);
