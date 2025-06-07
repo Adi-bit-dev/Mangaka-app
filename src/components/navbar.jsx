@@ -60,7 +60,7 @@ function Navbar({ setShowMenu }) {
             console.log("User searched:", search);
 
             // route the user to the search page and pss the manga name
-            navigate('/searchPage', {state: {mangaName: search}});
+            navigate('/searchPage', { state: { mangaName: search } });
             console.log(search);
             if (searchVisible) {
                 hideSearch();
@@ -86,7 +86,19 @@ function Navbar({ setShowMenu }) {
             </div>
 
             <div className="search" ref={boxRef}>
-                <input type="text" placeholder="Type here to search" id="auth-search-field" />
+                <input type="text" placeholder="Type here to search" id="auth-search-field" onBlur={(e) => {
+                    const searchInput = document.getElementById("auth-search-field");
+                    const search = searchInput.value.trim();
+
+                    console.log("User searched:", search);
+
+                    // route the user to the search page and pss the manga name
+                    navigate('/searchPage', { state: { mangaName: search } });
+                    console.log(search);
+                    if (searchVisible) {
+                        hideSearch();
+                    }
+                }} />
             </div>
 
             <div className="left">
