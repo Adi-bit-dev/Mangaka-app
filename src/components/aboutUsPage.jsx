@@ -5,12 +5,12 @@ import { useNavigate } from 'react-router-dom';
 function AboutUs() {
     const navigate = useNavigate();
 
-    function handleBack(){
+    function handleBack() {
         console.log("back button clicked");
         navigate('/');
         localStorage.setItem("showMenu", 'false');
     }
-    
+
     return (
         <>
             <div className="back" onClick={handleBack}>
@@ -47,16 +47,28 @@ function AboutUs() {
                     <h2>The Team Behind Mangaka</h2>
                     <div className="team-grid">
                         <div className="member">
-                            <h3>Yuki A.</h3>
-                            <p>Frontend & Design Lead</p>
+                            <h3>Parijat Das</h3>
+                            <p>Developer and founder of Mangaka</p>
                         </div>
                         <div className="member">
-                            <h3>Ryo S.</h3>
-                            <p>Backend & Infrastructure</p>
+                            <h3>Directed by</h3>
+                            <p>Depression</p>
                         </div>
                         <div className="member">
-                            <h3>Tomo K.</h3>
-                            <p>Community & Outreach</p>
+                            <h3>Produced by</h3>
+                            <p>Anxiety</p>
+                        </div>
+                        <div className="member">
+                            <h3>UI/UX designer</h3>
+                            <p>Chat gpt</p>
+                        </div>
+                        <div className="member">
+                            <h3>Life support </h3>
+                            <p>Chat gpt</p>
+                        </div>
+                        <div className="member">
+                            <h3>Marketer and cummunity lead</h3>
+                            <p>Debopriyo Maikup</p>
                         </div>
                     </div>
                 </section>
