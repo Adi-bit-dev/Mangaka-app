@@ -18,7 +18,7 @@ function Auth() {
             setShowmessage(false);
             // send to backend
             try {
-                const res = await fetch('http://192.168.0.104:3000/login-user', {
+                const res = await fetch('http://mangaka-backend.onrender.com/login-user', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
