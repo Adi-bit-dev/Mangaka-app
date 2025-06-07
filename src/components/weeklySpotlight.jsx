@@ -9,7 +9,7 @@ function WeeklySpotlight() {
     useEffect(() => {
         const fetchLatestManga = async () => {
             try {
-                const res = await fetch('http://localhost:3000/get-latest-manga');
+                const res = await fetch('http://192.168.0.104:3000/get-latest-manga');
                 const data = await res.json();
                 // console.log(data);
                 setLatestManga(data);

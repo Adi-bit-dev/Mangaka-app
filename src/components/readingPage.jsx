@@ -60,7 +60,7 @@ function ReadingPage() {
         const queryString = new URLSearchParams(params).toString();
 
         try {
-            const response = await fetch(`http://localhost:3000/specific-manga-chapter?${queryString}`, {
+            const response = await fetch(`http://192.168.0.104:3000/specific-manga-chapter?${queryString}`, {
                 method: 'GET',
             });
 
@@ -92,7 +92,7 @@ function ReadingPage() {
         const queryString = new URLSearchParams(params).toString();
 
         try {
-            const response = await fetch(`http://localhost:3000/specific-manga-chapter?${queryString}`, {
+            const response = await fetch(`http://192.168.0.104:3000/specific-manga-chapter?${queryString}`, {
                 method: 'GET',
             });
 
@@ -124,7 +124,7 @@ function ReadingPage() {
         const queryString = new URLSearchParams(params).toString();
 
         try {
-            const response = await fetch(`http://localhost:3000/specific-manga-chapter?${queryString}`, {
+            const response = await fetch(`http://192.168.0.104:3000/specific-manga-chapter?${queryString}`, {
                 method: 'GET',
             });
 

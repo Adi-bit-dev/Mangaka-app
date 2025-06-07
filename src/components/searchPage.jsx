@@ -74,7 +74,7 @@ function SearchPage() {
     const searchManga = async (titleQuery) => {
         setLoading(true);
         try {
-            const response = await fetch(`http://localhost:3000/search?titleQuery=${encodeURIComponent(titleQuery)}`);
+            const response = await fetch(`http://192.168.0.104:3000/search?titleQuery=${encodeURIComponent(titleQuery)}`);
 
             const data = await response.json();
 

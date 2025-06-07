@@ -75,7 +75,7 @@ function GenresPage() {
     const searchManga = async (genre) => {
         setLoading(true);
         try {
-            const response = await fetch(`http://localhost:3000/search-genre?genre=${encodeURIComponent(genre)}`);
+            const response = await fetch(`http://192.168.0.104:3000/search-genre?genre=${encodeURIComponent(genre)}`);
 
             const data = await response.json();
 

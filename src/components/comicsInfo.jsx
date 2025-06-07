@@ -69,7 +69,7 @@ function ComicsInfo() {
     async function getChapters(manga_title) {
         try {
 
-            const response = await fetch(`http://localhost:3000/manga-chapters?title=${encodeURIComponent(manga_title)}`);
+            const response = await fetch(`http://192.168.0.104:3000/manga-chapters?title=${encodeURIComponent(manga_title)}`);
             const data = await response.json();
             // console.log(data);
             setChapterName(data);
