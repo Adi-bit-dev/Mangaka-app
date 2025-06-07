@@ -273,7 +273,11 @@ p {
     flex-direction: column;
     gap: 15px;
 }
-
+@media (max-width: 350px) {
+    .spe-chap{
+        min-width: none !important;
+    }
+}
 @media (max-width: 850px) {
     .image-placeholder {
         height: 445px !important;

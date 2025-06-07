@@ -132,7 +132,7 @@ function ComicsInfo() {
                         </div>
                         <h2 className="color-black">Description</h2>
                         <p className="roboto">{manga.description || 'No description available.'}</p>
-                        <div className="chapters">
+                        <div className="chapters spe-chap">
                             {Array.isArray(chapterName) && chapterName.length > 0 ? (
                                 chapterName.map((chapter, index) => (
                                     <div key={index} className="butn">
