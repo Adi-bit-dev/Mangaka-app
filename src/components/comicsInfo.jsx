@@ -93,7 +93,7 @@ function ComicsInfo() {
             )}
             <div className="info-card">
                 <div className="bkmark">
-                    <img src="../src/assets/bookmark.png" alt="B" width="40" height="40" />
+                    <img src="../public/bookmark.png" alt="B" width="40" height="40" />
                 </div>
                 <div className="image-placeholder">
                     <div className="blur-layer special-blur"></div>

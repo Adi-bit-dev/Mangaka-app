@@ -126,7 +126,7 @@ function SearchPage() {
                                 onClick={() => handleCardClick(item)}
                             >
                                 <img
-                                    src={item.Coverimg || "../src/assets/test.jpg"}
+                                    src={item.Coverimg || "../public/test.jpg"}
                                     alt={item.title}
                                 />
                                 <div className="weekly-cards-title special-margin">{item.title}</div>
