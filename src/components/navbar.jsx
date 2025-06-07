@@ -61,7 +61,7 @@ function Navbar({ setShowMenu }) {
 
             // route the user to the search page and pss the manga name
             navigate('/searchPage', {state: {mangaName: search}});
-
+            console.log(search);
             if (searchVisible) {
                 hideSearch();
             }
