@@ -1,0 +1,84 @@
+.categories-box {
+    /* background-color: #fff; */
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    /* width: 80%; */
+    width: 100%;
+    max-width: 600px;
+
+    text-align: left;
+    align-self: center;
+
+    max-height: 255px;
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+}
+
+.categories-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    transform: scale(1.25);
+
+    flex: 1;
+    /* overflow: scroll; */
+}
+
+.category-item {
+    /* padding: 8px 16px; */
+    padding: 3px;
+    border-radius: 20px;
+    font-size: 0.754rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.category-item:hover {
+    transform: scale(1.05);
+    text-decoration: underline;
+}
+
+/* Text-only colors for each genre */
+.action {
+    color: #e74c3c;
+}
+
+/* Red */
+.adventure {
+    color: #f39c12;
+}
+
+/* Orange */
+.fantasy {
+    color: #9b59b6;
+}
+
+/* Purple */
+.scifi {
+    color: #16a085;
+}
+
+/* Teal */
+.horror {
+    color: #c0392b;
+}
+
+/* Dark Red */
+.comedy {
+    color: #f1c40f;
+}
+
+/* Yellow */
+.drama {
+    color: #2980b9;
+}
+
+/* Blue */
+.romance {
+    color: #e84393;
+}

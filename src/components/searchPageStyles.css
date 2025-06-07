@@ -1,0 +1,162 @@
+.search-container {
+    /* background-color: #66635f; */
+    flex: 1;
+    width: 99%;
+    margin: 8px auto;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 10px;
+}
+
+.search-root {
+    display: flex;
+    /* background-color: aqua; */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.special-nav {
+    background-color: aliceblue !important;
+}
+
+.upper-search-section {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 8px;
+    padding: 10px 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#search-header {
+    font-size: 1.6em;
+    font-weight: 600;
+    color: black;
+}
+
+.search-text {
+    font-size: 1.4em;
+    color: #383838;
+    font-weight: 500;
+
+    font-style: italic;
+}
+
+.lower-search-section {
+    flex: 9;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 9px;
+    padding: 12px 0 24px;
+}
+
+.search-cards {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    width: 170px;
+}
+
+.search-cards:hover {
+    transform: translateY(-5px);
+}
+
+.search-cards>img {
+    height: 225px;
+    width: 100%;
+    object-fit: cover;
+    border-bottom: 1px solid #ccc;
+}
+
+.weekly-cards-title.special-margin {
+    margin: 8px 10px 4px;
+    font-size: 1em;
+    font-weight: 600;
+    color: #333;
+    padding: 0px;
+    text-align: left;
+}
+
+.special-stars {
+    padding: 4px 10px 10px;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    justify-content: flex-start;
+}
+
+@media (min-width: 730px) {
+    .search-cards {
+        width: 200px;
+    }
+
+    .lower-search-section {
+        gap: 20px;
+    }
+
+    .search-cards>img {
+        height: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-text {
+        font-size: 1.2em;
+    }
+
+    #search-header {
+        font-size: 1.3em;
+        /* width: fit-content; */
+        min-width: fit-content;
+    }
+
+    .weekly-cards-title.special-margin {
+        font-size: 0.95em;
+    }
+
+    .special-stars {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 375px) {
+    .lower-search-section {
+        /* background: aqua; */
+        overflow: scroll;
+        /* max-height: 505px; */
+        max-height: 473px;
+    }
+
+    .search-text {
+        white-space: nowrap;
+        overflow: hidden !important;
+        text-overflow: ellipsis;
+        max-height: 32px;
+        /* or any fixed width */
+    }
+}
+
+@media (max-width: 360px) {
+    .search-cards {
+        width: 157px !important;
+    }
+
+    .lower-search-section {
+        max-height: 556px;
+    }
+}

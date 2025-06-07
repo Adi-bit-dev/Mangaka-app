@@ -1,0 +1,41 @@
+.manga-image {
+  width: 100%;
+  max-width: 800px;
+  display: block;
+  margin: 0 auto;
+}
+
+.reading-part{
+    width: 95%;
+    background-color: aqua;
+    height: fit-content;
+}
+
+.closing-part{
+    background-color: antiquewhite;
+
+    min-height: 30px;
+    width: 95%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 12px;
+}
+.forward, .backward{
+    padding: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    align-self: flex-start;
+
+}
