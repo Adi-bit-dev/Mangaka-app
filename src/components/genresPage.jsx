@@ -127,7 +127,7 @@ function GenresPage() {
                                 onClick={() => handleCardClick(item)}
                             >
                                 <img
-                                    src={item.Coverimg || "../public/test.jpg"}
+                                    src={item.Coverimg || "/test.jpg"}
                                     alt={item.title}
                                 />
                                 <div className="weekly-cards-title special-margin">{item.title}</div>

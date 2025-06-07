@@ -34,33 +34,33 @@ function SlideBar({ setShowMenu }) {
         <div className="side-bar">
             <div className="cross-icon color-black" onClick={handleMenuClick}>
                 <div className="close-icon">
-                    <img src="../public/cross.png" alt="Cross" />
+                    <img src="/cross.png" alt="Cross" />
                 </div>
             </div>
             <div className="option" style={{ marginTop: "12px" }} onClick={handleHomeClick}>
                 <div className="side-icon">
-                    <img src="../public/home.png" alt="Home" />
+                    <img src="/home.png" alt="Home" />
                 </div>
                 <div className="black-color">Home</div>
             </div>
 
             <div className="option">
                 <div className="side-icon">
-                    <img src="../pulic/bookmark.png" alt="Bookmark" />
+                    <img src="/bookmark.png" alt="Bookmark" />
                 </div>
                 <div className="black-color">Bookmark</div>
             </div>
 
             <div className="option">
                 <div className="side-icon">
-                    <img src="../public/notification.png" alt="Notifications" />
+                    <img src="/notification.png" alt="Notifications" />
                 </div>
                 <div className="black-color">Notifications</div>
             </div>
 
             <div className="option" onClick={handleGenresComponentClick}>
                 <div className="side-icon">
-                    <img src="../public/generes.png" alt="Genres" />
+                    <img src="/generes.png" alt="Genres" />
                 </div>
                 <div className="black-color">Genres</div>
             </div>
@@ -69,7 +69,7 @@ function SlideBar({ setShowMenu }) {
 
             <div className="option" onClick={handleAboutClick}>
                 <div className="side-icon">
-                    <img src="../public/aboutUs.png" alt="Genres" />
+                    <img src="/aboutUs.png" alt="Genres" />
                 </div>
                 <div className="black-color">About us</div>
             </div>

@@ -80,7 +80,7 @@ function Navbar({ setShowMenu }) {
         <div className="nav">
             <div className="right">
                 <div className="icon">
-                    <img src="../public/logo.png" alt="Icon" />
+                    <img src="/logo.png" alt="Icon" />
                 </div>
                 <div className="name">Mangaka</div>
             </div>
@@ -92,13 +92,13 @@ function Navbar({ setShowMenu }) {
             <div className="left">
                 <div className="donate">
                     <div className="heart">
-                        <img src="../public/heart.png" alt="Heart" />
+                        <img src="/heart.png" alt="Heart" />
                     </div>
                     <div>Support Us</div>
                 </div>
 
                 <div className="icn" onClick={handleSearchClick}>
-                    <img src="../public/search.png" alt="S" />
+                    <img src="/search.png" alt="S" />
                 </div>
 
                 {!login ? (
@@ -108,7 +108,7 @@ function Navbar({ setShowMenu }) {
                     <div className="account"></div>
                 )}
                 <div className="icn menu-icon" onClick={handleMenuClick}>
-                    <img src="../public/menu.png" alt="M" />
+                    <img src="/menu.png" alt="M" />
                 </div>
             </div>
         </div>

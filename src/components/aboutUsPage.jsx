@@ -14,7 +14,7 @@ function AboutUs() {
     return (
         <>
             <div className="back" onClick={handleBack}>
-                <img src="../public/back.png" alt="B" />
+                <img src="/back.png" alt="B" />
             </div>
 
             <header>
