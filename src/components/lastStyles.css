@@ -158,11 +158,14 @@
     margin-left: 5px;
     padding: 6px;
 
-    color: rgb(80, 79, 79);
+    color: rgb(54, 54, 54);
     font-weight: 500;
 }
 
 @media (max-width: 808px) {
+    .episodes{
+        font-size: 1.25em;
+    }
     .txt:not(.active) {
         display: none;
     }
@@ -174,10 +177,12 @@
 
     .episode-container{
         display: flex;
+        max-height: 100px;
+        overflow: scroll;
     }
     .last-cards-container {
         flex-direction: column;
-
+        margin-left: 2px;
         /* background-color: tomato; */
     }
 
@@ -200,7 +205,7 @@
         min-width: 194px;
         /* background-color: aqua; */
 
-        font-size: 0.61em;
+        font-size: 0.9em;
     }
 
     .lst-cards {
