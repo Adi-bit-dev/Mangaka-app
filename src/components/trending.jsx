@@ -47,7 +47,7 @@ function Trending() {
                             <span className="stars spe-stars">{generateStarsJSX(2)}</span>
                             <div className="view">
                                 <div className="view-icon">
-                                    <img src="../public/view.png" alt="V" />
+                                    <img src="/view.png" alt="V" />
                                 </div>
                                 <span>2.5k</span>
                             </div>
@@ -68,7 +68,7 @@ function Trending() {
                             <span className="stars spe-stars">{generateStarsJSX(4.5)}</span>
                             <div className="view">
                                 <div className="view-icon">
-                                    <img src="../public/view.png" alt="V" />
+                                    <img src="/view.png" alt="V" />
                                 </div>
                                 <span>3k</span>
                             </div>
@@ -88,7 +88,7 @@ function Trending() {
                             <span className="stars spe-stars">{generateStarsJSX(3.5)}</span>
                             <div className="view">
                                 <div className="view-icon">
-                                    <img src="../public/view.png" alt="V" />
+                                    <img src="/view.png" alt="V" />
                                 </div>
                                 <span>4.5k</span>
                             </div>
@@ -108,7 +108,7 @@ function Trending() {
                             <span className="stars spe-stars">{generateStarsJSX(5)}</span>
                             <div className="view">
                                 <div className="view-icon">
-                                    <img src="../public/view.png" alt="V" />
+                                    <img src="/view.png" alt="V" />
                                 </div>
                                 <span>18k</span>
                             </div>
