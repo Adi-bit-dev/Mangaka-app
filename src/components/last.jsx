@@ -47,6 +47,32 @@ function Last() {
 
                 </div>
 
+                <div className="wrappr">
+                    <div className="lst-cards">
+                        <img src="https://m.media-amazon.com/images/M/MV5BOTczMjM3MDUtYmZjMC00YzZhLWE4ODQtNjg5YWU4NTJjNzY2XkEyXkFqcGc@._V1_.jpg"
+                            alt="Image" />
+                    </div>
+
+                    <div className="mini-wrapper">
+
+                        <div className="lst-title">Another one</div>
+                        <div className="tags special">
+                            <div className="tag1">Romance</div>
+                            <div className="tag2">Comedy</div>
+                        </div>
+                        <div className="episode-container black-color">
+                            <div className="episodes">Episode 1</div>
+                            <div className="episodes">Episode 2</div>
+                            <div className="episodes">Episode 3</div>
+                            <div className="episodes">Episode 4</div>
+                            <div className="episodes">Episode 5</div>
+                            <div className="episodes">Episode 6</div>
+                            <div className="episodes">Episode 7</div>
+                            <div className="episodes">Episode 8</div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     )

@@ -133,14 +133,14 @@
     padding: 4px;
     gap: 8px;
     /* background-color: #333; */
-    color: grey;
+    color: #191919;
     transform: scale(0.9);
     margin-top: 5px;
 }
 
 .trending-tag {
     border-radius: 5px;
-    border: 1px solid grey;
+    border: 1px solid #494949;
     padding: 4px 8px;
     font-size: 0.75em;
     background-color: #f7f7f7;

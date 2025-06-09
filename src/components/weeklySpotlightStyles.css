@@ -62,23 +62,30 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     color: #222;
+
+    text-align: left;
 }
 
 .tags {
     display: flex;
     align-items: center;
     margin-left: 8px;
-    color: rgb(0, 0, 0);
+    /* color: rgb(0, 0, 0); */
     gap: 6px;
     flex-wrap: wrap;
 }
 
+.weekly-tags {
+    color: black !important;
+    font-size: 1em !important;
+
+}
+
 .tags>div {
     padding: 6px 10px;
-    border: 1px solid rgb(207, 206, 206);
+    border: 1px solid rgb(102 98 98);
     font-size: 0.75em;
     border-radius: 8px;
-    background-color: #fff;
 }
 
 .weekly-spotlight-cards>img {
@@ -128,7 +135,7 @@
     }
 
     .tags {
-        gap: 3px !important;
+        gap: 4.5px !important;
     }
 
     .wrapper {
@@ -189,7 +196,7 @@
         gap: 7.5px;
     }
 
-    .hero-content{
+    .hero-content {
         margin-top: 3%;
     }
 }

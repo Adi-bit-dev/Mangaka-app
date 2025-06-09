@@ -130,31 +130,32 @@
     font-weight: bold;
 }
 
-.txt:hover{
+.txt:hover {
     color: #333;
     cursor: pointer;
 }
+
 .active {
     color: #333;
 }
 
-.episode-container{
+.episode-container {
     /* background-color: aqua; */
     flex: 1;
-    
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
     /* gap: 5px; */
-    
+
     font-size: 0.6em;
     font-family: sans-serif;
     max-height: 108px;
     display: none;
 }
 
-.episodes{
+.episodes {
     margin-left: 5px;
     padding: 6px;
 
@@ -163,9 +164,10 @@
 }
 
 @media (max-width: 808px) {
-    .episodes{
+    .episodes {
         font-size: 1.25em;
     }
+
     .txt:not(.active) {
         display: none;
     }
@@ -175,11 +177,12 @@
         min-width: 0px !important;
     }
 
-    .episode-container{
+    .episode-container {
         display: flex;
         max-height: 100px;
         overflow: scroll;
     }
+
     .last-cards-container {
         flex-direction: column;
         margin-left: 2px;
@@ -196,8 +199,6 @@
         flex-direction: column;
         padding: 5px;
         flex: 1;
-        /* background-color: #333; */
-        background-color: rgb(209, 206, 203);
         border-radius: 12px;
     }
 
@@ -206,6 +207,8 @@
         /* background-color: aqua; */
 
         font-size: 0.9em;
+        text-align: left;
+        margin-left: 1px;
     }
 
     .lst-cards {

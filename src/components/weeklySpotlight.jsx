@@ -38,7 +38,7 @@ function WeeklySpotlight() {
                             <img src={manga.Coverimg} alt={manga.title} loading="lazy" />
                         </div>
                         <div className="weekly-cards-title">{manga.title}</div>
-                        <div className="tags">
+                        <div className="tags weekly-tags">
                             {(() => {
                                 // Shuffle tags and pick 2 random tags
                                 const shuffledTags = [...manga.tags].sort(() => 0.5 - Math.random());
