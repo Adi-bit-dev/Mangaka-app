@@ -67,8 +67,8 @@ function AboutUs() {
                             <p>Chat gpt</p>
                         </div>
                         <div className="member">
-                            <h3>Marketer and cummunity lead</h3>
-                            <p>Debopriyo Maikup</p>
+                            <h3>Marketer and commercial lead</h3>
+                            <p>Debopriyo Maikap</p>
                         </div>
                     </div>
                 </section>
