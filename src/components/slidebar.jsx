@@ -13,6 +13,10 @@ function SlideBar({ setShowMenu }) {
         localStorage.setItem("showMenu", "false")
     }
 
+    function comingSoon() {
+        alert("coming soon");
+    }
+
     function handleMenuClick() {
         const current = localStorage.getItem("showMenu") === "true";
         const newValue = !current;
@@ -44,14 +48,14 @@ function SlideBar({ setShowMenu }) {
                 <div className="black-color">Home</div>
             </div>
 
-            <div className="option">
+            <div className="option" onClick={() => comingSoon()}>
                 <div className="side-icon">
                     <img src="/bookmark.png" alt="Bookmark" />
                 </div>
                 <div className="black-color">Bookmark</div>
             </div>
 
-            <div className="option">
+            <div className="option" onClick={() => comingSoon()}>
                 <div className="side-icon">
                     <img src="/notification.png" alt="Notifications" />
                 </div>

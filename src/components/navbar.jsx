@@ -17,6 +17,10 @@ function Navbar({ setShowMenu }) {
         setShowMenu(newValue);
     }
 
+    function comingSoon() {
+        alert("coming soon");
+    }
+
     function handleSearchClick() {
         setSearchVisible(true);
         const searchbar = document.querySelector(".search");
@@ -102,7 +106,7 @@ function Navbar({ setShowMenu }) {
             </div>
 
             <div className="left">
-                <div className="donate">
+                <div className="donate" onClick={() => comingSoon()}>
                     <div className="heart">
                         <img src="/heart.png" alt="Heart" />
                     </div>

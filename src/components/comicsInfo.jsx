@@ -41,10 +41,24 @@ function ComicsInfo() {
         return stars;
     }
 
+    function formatViews(number) {
+        if (number < 1000) {
+            return number.toString();
+        } else if (number < 1_000_000) {
+            return (number / 1000).toFixed(number % 1000 === 0 ? 0 : 1) + 'k';
+        } else {
+            return (number / 1_000_000).toFixed(number % 1_000_000 === 0 ? 0 : 1) + 'M';
+        }
+    }
+
     function handleReadClick(manga) {
-        console.log(manga);
+        if (!chapterName || chapterName.length === 0) {
+            alert("No chapters available for this manga yet.");
+            return;
+        }
         navigate('/readingPage', { state: { manga } });
     }
+
 
     useEffect(() => {
         function handleClickOutside(event) {
@@ -109,7 +123,7 @@ function ComicsInfo() {
                     <div className="flexo">
                         <div className="views color-black">
                             <span className="roboto">Views: </span>
-                            <span>2,000</span>
+                            <span>{formatViews(manga.views)}</span>
                         </div>
                         <h1 className="roboto color-black">{manga.title}</h1>
                         <div className="info">
@@ -141,6 +155,7 @@ function ComicsInfo() {
                                 ))
                             ) : (
                                 <div className="color-black">No chapters found</div>
+
                             )}
                         </div>
                     </div>
