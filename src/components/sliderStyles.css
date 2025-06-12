@@ -11,15 +11,10 @@
     background-color: antiquewhite;
     border-radius: 20px;
     transform: scale(0.95);
-
-    /* background-image: url("../assets/hero_background.jpg"); */
-
-    /* background-image: url("../assets/demoback.jpg"); */
-    background-image: url("../assets/demoback2.jpg");
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: linear-gradient(135deg, #6a0dad, #815d91, #9b59b6, #b084cc);
+    
+    filter: brightness(1.3);
+    /* font-family: sans-serif; */
 }
 
 .blur-layer {
@@ -28,9 +23,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    backdrop-filter: blur(5px);
-    background-color: rgba(255, 255, 255, 0.233);
-    /* optional for brightness */
+    backdrop-filter: blur(2px);
 }
 
 @media (max-width: 412px) {

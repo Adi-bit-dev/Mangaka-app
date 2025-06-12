@@ -15,6 +15,9 @@
     gap: 15px;
     flex-wrap: wrap;
     margin-top: 20px;
+
+    min-height: 840px;
+    max-height: 846px;
 }
 
 .header {
