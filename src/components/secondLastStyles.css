@@ -26,3 +26,18 @@
     }
 
 }
+
+@media (max-width: 1113px) and (min-width: 639px){
+    .second-last-container{
+        max-width: none !important;
+    }
+
+    .weekly-spotlight-cards-container{
+        width: auto !important;
+    }
+
+    .weekly-spotlight{
+        width: 100% !important;
+        max-width: 740px !important;
+    }
+}

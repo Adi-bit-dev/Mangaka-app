@@ -205,3 +205,9 @@
         padding-bottom: 5px;
     }
 }
+
+@media (max-width: 1113px) and (min-width: 639px){
+    .cards-info{
+        width: 237px;
+    }
+}
