@@ -122,11 +122,11 @@
         width: 42%;
         position: absolute;
         /* right: -12px; */
-        right: -7.8px;
+        right: 2px;
         transform: scale(0.78);
         margin: 0px;
         /* top: -20px; */
-        top: -16px;
+        top: -6px;
     }
 
     .hero-content {
