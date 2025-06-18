@@ -241,4 +241,12 @@
         min-width: 124px;
 
     }
+
+    .trending-container {
+        max-width: 344px;
+    }
+
+    .last-container{
+        width: 97%;
+    }
 }
