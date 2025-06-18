@@ -131,7 +131,7 @@ function SearchPage() {
                                     alt={item.title}
                                 />
                                 <div className="weekly-cards-title special-margin">{item.title}</div>
-                                <div className="stars special-stars">
+                                <div className="stars special-stars" style={{filter: invert(1)}}>
                                     {generateStarsJSX(item.ratings || 0)}
                                 </div>
                             </div>

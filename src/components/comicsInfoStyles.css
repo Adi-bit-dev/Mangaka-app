@@ -1,11 +1,4 @@
 .comics-info-container {
-    /* display: flex;
-    gap: 2rem;
- 
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    max-width: 1200px; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -13,6 +6,10 @@
     padding: 1rem;
     width: 100%;
     max-width: 1400px;
+}
+
+.color-black{
+    color: #1e1e1e;
 }
 
 .comic-tags {
@@ -27,8 +24,8 @@
 .info-weekly-spotlight {
     flex: 1 1 350px;
     background-color: #262626;
-    border: 1px solid #333;
-    border-radius: 12px;
+    /* border: 1px solid #333; */
+    border-radius: 10px;
     padding: 1.5rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
     max-width: 100%;
@@ -36,23 +33,12 @@
 
 .info1 {
     align-items: center;
-    /* min-width: 400px; */
+    gap: 26px;
     width: 100%;
 }
 
-.info2 {
-    /* min-width: 390px; */
-}
-
 .info-card {
-    /* width: 100%; */
-    /* width: 410px;
-    height: 616px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    transition: transform 0.2s; */
-
+    align-self: center;
     width: 100%;
     max-width: 400px;
     height: auto;
@@ -275,8 +261,6 @@
 }
 
 .info-weekly-spotlight {
-    /* min-width: 384px; */
-    /* max-height: 327px; */
     display: flex;
     overflow: hidden;
     flex-direction: row;
@@ -287,7 +271,7 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 
     background-color: #222;
-    border: 1px solid #333;
+    /* border: 1px solid #333; */
     width: 100%;
 }
 
@@ -338,7 +322,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     /* color: white; */
-
+    text-align: left;
     color: #f5deb3;
     font-size: 1rem;
     font-weight: 600;
@@ -428,7 +412,7 @@
 
     color: #f5deb3;
     text-shadow: 1px 1px 2px #000;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
     text-align: left;
 }
 
@@ -671,5 +655,5 @@ body {
 }
 
 .info-weekly-cards-title {
-    color: #5f5f5f;
+    color: #3c3c3c;
 }

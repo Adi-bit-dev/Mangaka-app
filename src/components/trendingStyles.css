@@ -204,8 +204,41 @@
     }
 }
 
-@media (max-width: 1113px) and (min-width: 639px){
-    .cards-info{
+@media (max-width: 1113px) and (min-width: 639px) {
+    .cards-info {
         width: 237px;
+    }
+}
+
+/* ---------  IPAD styling --------- */
+
+@media (max-width: 630px) and (min-width: 352px) {
+    .second-last-container {
+        max-width: none !important;
+    }
+
+    .weekly-spotlight {
+        width: 100% !important;
+        max-width: 740px !important;
+    }
+
+    .weekly-spotlight-cards-container {
+        width: auto !important;
+    }
+
+    .cards-info {
+        height: 147px;
+    }
+
+    .weekly-spotlight-cards {
+        height: 242px;
+        /* width: 165px; */
+        width: 173px;
+    }
+
+    .trending-cards {
+        height: 150px;
+        min-width: 124px;
+
     }
 }

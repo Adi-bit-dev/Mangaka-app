@@ -288,7 +288,7 @@ input[type="password"] {
 
 @media (max-width: 480px) {
     .auth-box {
-        width: 90vw;
+        width: 96vw;
         min-height: 57vh;
         padding: 15px;
     }
