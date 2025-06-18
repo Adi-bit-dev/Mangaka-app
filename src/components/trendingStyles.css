@@ -242,11 +242,14 @@
 
     }
 
-    .trending-container {
-        max-width: 344px;
-    }
-
+    
     .last-container{
         width: 97%;
+    }
+}
+
+@media (min-width: 344px) and (max-width: 360px) {
+    .trending-container {
+        max-width: 344px;
     }
 }
