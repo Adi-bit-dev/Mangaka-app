@@ -19,6 +19,8 @@ function ComicsInfo() {
     const { state } = useLocation();
     const manga = state?.manga;
 
+    const tags = manga.tags || [];
+
     function generateStarsJSX(rating) {
         const fullStars = Math.floor(rating);
         const hasHalfStar = rating % 1 >= 0.5;
@@ -59,7 +61,6 @@ function ComicsInfo() {
         navigate('/readingPage', { state: { manga } });
     }
 
-
     useEffect(() => {
         function handleClickOutside(event) {
             if (
@@ -96,7 +97,6 @@ function ComicsInfo() {
         console.log("get chapters useEffect running");
         getChapters(manga.title);
     }, []);
-
     return (
         <>
             <Navbar setShowMenu={setShowMenu} />
@@ -105,58 +105,148 @@ function ComicsInfo() {
                     <SlideBar />
                 </div>
             )}
-            <div className="info-card">
-                <div className="bkmark">
-                    <img src="/bookmark.png" alt="B" width="40" height="40" />
-                </div>
-                <div className="image-placeholder">
-                    <div className="blur-layer special-blur"></div>
-                    <img src={manga.Coverimg} alt="Cover Image" width="250" height="375" />
 
-                    <div className="holder">
-                        <img src={manga.Coverimg} alt="Cover Image" width="250" height="375" />
+            <div className="comics-info-container">
+                <div className="info1">
 
-                        <div className="startReading" onClick={() => handleReadClick(manga)}>Start Reading</div>
+                    <div className="rex-ctrl">
+                        <div className="info-card">
+                            <img src={manga.Coverimg} alt="G" />
+                        </div>
+
+                        <div className="mid-ctn">
+
+                            <div className="info-views">
+                                <div className="views-img">
+                                    <img src="/view.png" alt="E" />
+                                </div>
+                                <span>25k</span>
+                            </div>
+
+                            <div className="info-views">
+                                <div className="views-img">
+                                    <img src="/acc.png" alt="E" />
+                                </div>
+                                <span>25k</span>
+                            </div>
+
+                        </div>
+
+                        <div className="info-bookmark">Bookmark</div>
+                    </div>
+
+                    <div className="sub-info">
+                        <div className="title">{manga.title}</div>
+                        <div className="maker">
+                            <div className="profile">
+                                <img src="/download.jpg" alt="P" />
+                            </div>
+                            <div className="author-name">Harumi</div>
+                        </div>
+
+                        <div className="summary">
+                            <div className="title-sum">Summary</div>
+                            <div className="info-desc">
+                                <p>{manga.description}</p>
+                            </div>
+                        </div>
+
+                        <div className="comic-tags">
+                            {tags.map((tag, index) => {
+                                return (
+                                    <div className="comic-tag" key={index}>
+                                        {tag}
+                                    </div>
+                                );
+                            })}
+                        </div>
                     </div>
                 </div>
-                <div className="content">
-                    <div className="flexo">
-                        <div className="views color-black">
-                            <span className="roboto">Views: </span>
-                            <span>{formatViews(manga.views)}</span>
-                        </div>
-                        <h1 className="roboto color-black">{manga.title}</h1>
-                        <div className="info">
-                            <span className="roboto"><strong>Author:</strong>{manga.author || 'Unknown'}</span>
-                            <span className="roboto">
-                                <strong>Genre:</strong>
-                                <span className="width-fix">
-                                    {Array.isArray(manga.tags) ? manga.tags.join(', ') : 'No tags available.'}
-                                </span>
-                            </span>
-                            <span className="roboto"><strong>Release:</strong>{
-                                new Date(manga.createdAt).toLocaleDateString('en-US', {
-                                    year: 'numeric',
-                                    month: 'long',
-                                    day: 'numeric'
-                                })
-                            }</span>
-                            <span className="roboto"><strong>Status:</strong>{manga.status}</span>
-                            <span className="flex roboto"><strong>Rating:</strong> <span className="stars">{generateStarsJSX(manga.ratings)}</span></span>
-                        </div>
-                        <h2 className="color-black">Description</h2>
-                        <p className="roboto">{manga.description || 'No description available.'}</p>
-                        <div className="chapters spe-chap">
-                            {Array.isArray(chapterName) && chapterName.length > 0 ? (
-                                chapterName.map((chapter, index) => (
-                                    <div key={index} className="butn">
-                                        <span className="margin-left">{chapter.title}</span>
-                                    </div>
-                                ))
-                            ) : (
-                                <div className="color-black">No chapters found</div>
+                <div className="info2">
+                    <div className="info-chap">
+                        <div className="chapter">First chapter</div>
+                        <div className="chapter">Last chapter</div>
+                    </div>
+                    <div className="chap-container">
+                        {Array.isArray(chapterName) && chapterName.length > 0 ? (
+                            chapterName.map((chapter, index) => (
+                                <div key={index} className="chap-sec">
+                                    <span className="chap-fst">{chapter.title}</span>
+                                    <span className="chap-lst">{chapter.createdAt}</span>
+                                </div>
+                            ))
+                        ) : (
+                            <div style={{ color: "black" }}>No chapters found</div>
 
-                            )}
+                        )}
+                    </div>
+                </div>
+
+                <div className="info-weekly-spotlight">
+                    <div className="info-weekly-spotlight-cards-container">
+                        <div className="info-wrapper">
+                            <div className="info-weekly-spotlight-cards">
+                                <img src="https://m.media-amazon.com/images/M/MV5BOTczMjM3MDUtYmZjMC00YzZhLWE4ODQtNjg5YWU4NTJjNzY2XkEyXkFqcGc@._V1_.jpg"
+                                    alt="Image" />
+                            </div>
+                            <div className="info-weekly-cards-title">Solo levelling</div>
+                            <div className="tags">
+                                <div className="tag1">Action</div>
+                                <div className="tag2">Comedy</div>
+                            </div>
+
+                        </div>
+
+                        <div className="info-wrapper">
+                            <div className="info-weekly-spotlight-cards">
+                                <img src="https://m.media-amazon.com/images/M/MV5BOTczMjM3MDUtYmZjMC00YzZhLWE4ODQtNjg5YWU4NTJjNzY2XkEyXkFqcGc@._V1_.jpg"
+                                    alt="Image" />
+                            </div>
+                            <div className="info-weekly-cards-title">Solo levelling</div>
+                            <div className="tags">
+                                <div className="tag1">Action</div>
+                                <div className="tag2">Comedy</div>
+                            </div>
+
+                        </div>
+
+                        <div className="info-wrapper">
+                            <div className="info-weekly-spotlight-cards">
+                                <img src="https://m.media-amazon.com/images/M/MV5BOTczMjM3MDUtYmZjMC00YzZhLWE4ODQtNjg5YWU4NTJjNzY2XkEyXkFqcGc@._V1_.jpg"
+                                    alt="Image" />
+                            </div>
+                            <div className="info-weekly-cards-title">Solo levelling</div>
+                            <div className="tags">
+                                <div className="tag1">Action</div>
+                                <div className="tag2">Comedy</div>
+                            </div>
+
+                        </div>
+
+                        <div className="info-wrapper">
+                            <div className="info-weekly-spotlight-cards">
+                                <img src="https://m.media-amazon.com/images/M/MV5BOTczMjM3MDUtYmZjMC00YzZhLWE4ODQtNjg5YWU4NTJjNzY2XkEyXkFqcGc@._V1_.jpg"
+                                    alt="Image" />
+                            </div>
+                            <div className="info-weekly-cards-title">Solo levelling</div>
+                            <div className="tags">
+                                <div className="tag1">Action</div>
+                                <div className="tag2">Comedy</div>
+                            </div>
+
+                        </div>
+
+                        <div className="info-wrapper">
+                            <div className="info-weekly-spotlight-cards">
+                                <img src="https://m.media-amazon.com/images/M/MV5BOTczMjM3MDUtYmZjMC00YzZhLWE4ODQtNjg5YWU4NTJjNzY2XkEyXkFqcGc@._V1_.jpg"
+                                    alt="Image" />
+                            </div>
+                            <div className="info-weekly-cards-title">Solo levelling</div>
+                            <div className="tags">
+                                <div className="tag1">Action</div>
+                                <div className="tag2">Comedy</div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
