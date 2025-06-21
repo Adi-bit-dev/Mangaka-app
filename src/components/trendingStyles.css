@@ -217,7 +217,7 @@
         max-width: none !important;
     }
 
-    .weekly-spotlight {
+    .down-light {
         width: 100% !important;
         max-width: 740px !important;
     }
@@ -233,7 +233,7 @@
     .weekly-spotlight-cards {
         height: 242px;
         /* width: 165px; */
-        width: 173px;
+        width: 162px;
     }
 
     .trending-cards {

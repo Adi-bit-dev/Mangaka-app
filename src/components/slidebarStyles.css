@@ -5,7 +5,7 @@
     border-radius: 15px;
     min-height: 300px;
     min-width: 200px;
-    max-width: min-content;
+    max-width: 210px;
 
     display: flex;
     flex-direction: column;

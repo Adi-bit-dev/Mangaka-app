@@ -159,14 +159,10 @@
     .text {
         height: fit-content !important;
         margin: 0;
-        /* 'none' is not valid for margin */
         width: 100%;
     }
 
     .hero-title {
-        /* font-size: 0.6em;
-        line-height: 40px; */
-
         font-size: 0.68em;
         line-height: 38px;
     }
@@ -203,5 +199,11 @@
 
     .hero-content {
         margin-top: 3%;
+    }
+}
+
+@media (min-width: 342px) and (max-width: 345px) {
+    .weekly-spotlight{
+        padding: 10px !important;
     }
 }

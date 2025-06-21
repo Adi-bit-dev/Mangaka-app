@@ -28,7 +28,7 @@ function WeeklySpotlight() {
     };
 
     return (
-        <div className="weekly-spotlight">
+        <div className="weekly-spotlight down-light">
             <div className="header">Weekly spotlight</div>
 
             <div className="weekly-spotlight-cards-container">

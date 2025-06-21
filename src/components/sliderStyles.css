@@ -1,103 +1,35 @@
-* {
-    box-sizing: border-box;
+.spe-head {
+    align-self: center !important;
+    min-height: 0px !important;
 }
 
-.hero {
-    position: relative;
-    width: 100%;
-    height: 480px;
-    overflow: hidden;
-
-    background-color: antiquewhite;
-    border-radius: 20px;
-    transform: scale(0.95);
-    background: linear-gradient(135deg, #9f84b3, #815d91, #9b59b6, #b084cc);
-    
-    filter: brightness(1.3);
-    /* font-family: sans-serif; */
+.spe-head-cards-container {
+    max-width: 100% !important;
+    overflow: scroll !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
 }
 
-.blur-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    backdrop-filter: blur(2px);
-}
-
-@media (max-width: 412px) {
-    .hero {
-        height: 250px;
-    }
-
-    .slide {
-        height: 250px !important;
-    }
-
-    .dots {
-        bottom: 12px !important;
-        right: 0px !important;
-
-        transform: scale(0.5) !important;
-    }
-}
-
-.slides {
-    display: flex;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-.slides::-webkit-scrollbar {
+.spe-head-cards-container::-webkit-scrollbar {
     display: none;
 }
 
-.slide {
-    flex: none;
-    width: 100%;
-    height: 480px;
-    scroll-snap-align: start;
+.spe-slider-cards {
+    height: 228px !important;
+    width: 153px !important;
+}
+
+.weekly-spotligt {
+    /* min-width: 400px; */
+    flex: 1.3;
+    align-self: baseline;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
-    color: white;
-
-    position: relative;
-    ;
-
-    /* background-color: black; */
-}
-
-.slide>div {
-    color: white;
-
-    height: 100%;
-    width: 100%;
-}
-
-.dots {
-    position: absolute;
-    bottom: 30px;
-    right: 8px;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-}
-
-.dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.6);
-    transition: background-color 0.3s;
-}
-
-.dot.active {
+    flex-direction: column;
     background-color: white;
+    border-radius: 15px;
+    padding: 27px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    min-height: 845px;
+    max-height: 846px;
+    overflow: hidden;
 }
