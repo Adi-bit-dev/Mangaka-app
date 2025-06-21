@@ -5,10 +5,8 @@ import { useNavigate } from "react-router-dom";
 function Navbar({ setShowMenu }) {
     const boxRef = useRef(null);
     const [searchVisible, setSearchVisible] = useState(false);
-
     const navigate = useNavigate();
-    // let isLoggedin = localStorage.getItem("isLoggedin") == 'true';
-    const [login, setIsLogin] = useState(localStorage.getItem("isLoggedin") == 'true');
+    const [login, setIsLogin] = useState(localStorage.getItem("isLoggedin") === "true");
 
     function handleMenuClick() {
         const current = localStorage.getItem("showMenu") === "true";
@@ -18,7 +16,7 @@ function Navbar({ setShowMenu }) {
     }
 
     function comingSoon() {
-        alert("coming soon");
+        alert("Coming soon");
     }
 
     function handleSearchClick() {
@@ -28,6 +26,9 @@ function Navbar({ setShowMenu }) {
 
         searchbar.classList.add("active");
         left.classList.add("hide");
+
+        const searchInput = document.getElementById("auth-search-field");
+        if (searchInput) searchInput.value = ""; // Clear previous search
     }
 
     function hideSearch() {
@@ -39,9 +40,9 @@ function Navbar({ setShowMenu }) {
         left.classList.remove("hide");
     }
 
-    function handleloginClick() {
-        console.log("login button pressed");
-        navigate('/auth-user');
+    function handleLoginClick() {
+        console.log("Login button pressed");
+        navigate("/auth-user");
     }
 
     useEffect(() => {
@@ -61,14 +62,12 @@ function Navbar({ setShowMenu }) {
             const searchInput = document.getElementById("auth-search-field");
             const search = searchInput.value.trim();
 
-            console.log("User searched:", search);
+            if (!search) return;
 
-            // route the user to the search page and pss the manga name
-            navigate('/searchPage', { state: { mangaName: search } });
-            console.log(search);
-            if (searchVisible) {
-                hideSearch();
-            }
+            console.log("User searched:", search);
+            navigate("/searchPage", { state: { mangaName: search } });
+
+            if (searchVisible) hideSearch();
         }
 
         document.addEventListener("mousedown", handleClickOutside);
@@ -78,7 +77,7 @@ function Navbar({ setShowMenu }) {
             document.removeEventListener("mousedown", handleClickOutside);
             document.removeEventListener("keydown", handleKeyDown);
         };
-    }, [searchVisible]);
+    }, [searchVisible, navigate]);
 
     return (
         <div className="nav">
@@ -90,23 +89,15 @@ function Navbar({ setShowMenu }) {
             </div>
 
             <div className="search" ref={boxRef}>
-                <input type="text" placeholder="Type here to search" id="auth-search-field" onBlur={(e) => {
-                    const searchInput = document.getElementById("auth-search-field");
-                    const search = searchInput.value.trim();
-
-                    console.log("User searched:", search);
-
-                    // route the user to the search page and pss the manga name
-                    navigate('/searchPage', { state: { mangaName: search } });
-                    console.log(search);
-                    if (searchVisible) {
-                        hideSearch();
-                    }
-                }} />
+                <input
+                    type="text"
+                    placeholder="Type here to search"
+                    id="auth-search-field"
+                />
             </div>
 
             <div className="left">
-                <div className="donate" onClick={() => comingSoon()}>
+                <div className="donate" onClick={comingSoon}>
                     <div className="heart">
                         <img src="/heart.png" alt="Heart" />
                     </div>
@@ -114,17 +105,19 @@ function Navbar({ setShowMenu }) {
                 </div>
 
                 <div className="icn" onClick={handleSearchClick}>
-                    <img src="/search.png" alt="S" />
+                    <img src="/search.png" alt="Search" />
                 </div>
 
                 {!login ? (
-                    <div className="login" onClick={handleloginClick}>Login</div>
-
+                    <div className="login" onClick={handleLoginClick}>Login</div>
                 ) : (
-                    <div className="account"></div>
+                    <div className="account">
+                        <img src="/user.png" alt="User" className="user-avatar" />
+                    </div>
                 )}
+
                 <div className="icn menu-icon" onClick={handleMenuClick}>
-                    <img src="/menu.png" alt="M" />
+                    <img src="/menu.png" alt="Menu" />
                 </div>
             </div>
         </div>
